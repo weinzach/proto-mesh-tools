@@ -22,7 +22,7 @@ var nodePing = [];
 
 function printNodes(){
 	for (i = 0; i < nodeIP.length; i++) { 
-		console.log("["+i+"] "+nodeIP[i]+" "+nodePing[i]);
+		console.log("["+i+"] "+nodeIP[i]);
 	}
 }
 
@@ -68,16 +68,6 @@ Cjdns.connectWithAdminInfo(function (cjdns) {
                 cjdns.NodeStore_nodeForAddr(node.ip, waitFor(function (err, ret) {
                     if (err) { throw err; }
                     nodeIP.push(node.ip.toString());
-                }));
-            }).nThen(function (waitFor) {
-                switchLabel = null;
-                cjdns.RouterModule_pingNode(node.ip, 3000, waitFor(function (err, ret) {
-                    if (err) { throw err; }
-                    if (ret.result === 'pong') {
-                        nodePing.push('  ' + ret.ms.toString() +'ms');
-                        lags.push(Number(ret.ms));
-                        switchLabel = ret.from.replace(/.*@/, '');
-                    }
                 }));
             }).nThen;
         });
