@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-var Cjdns = require('/etc/proto-mesh/cjdns/tools/lib/cjdnsadmin/cjdnsadmin');
+var Cjdns = require('/opt/proto-mesh/cjdns/tools/lib/cjdnsadmin/cjdnsadmin');
 var nThen = require('nthen');
 
 var nodeIP = [];
