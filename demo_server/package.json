@@ -1,8 +1,8 @@
 {
-  "name": "utils",
+  "name": "demo_server",
   "version": "1.0.0",
   "description": "",
-  "main": "nearbyClients",
+  "main": "demo_server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "nthen": "^0.1.5",
     "socket.io": "^2.0.4"
   }
 }
